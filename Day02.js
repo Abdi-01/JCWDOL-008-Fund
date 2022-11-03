@@ -122,4 +122,56 @@ switch (profesi) {
 let validasi_email = email.includes('@') ? "Email Benar" : "Email Salah";
 
 
-/////////////////////// LOOP STATEMENT
+/////////////////////// LOOP STATEMENT //////////////////////////
+/**
+ * 1. WHILE LOOP
+ * 2. DO...WHILE
+ * 3. FOR LOOP
+ * 
+ */
+
+/**
+ * 1. WHILE LOOP
+ * while(condition){
+ *      // task 
+ * }
+ */
+
+// Example :
+let count = 10;
+
+while (true) {
+    console.log(count);
+    count--;
+    if (count == 0) {
+        break;
+    }
+};
+
+/**
+ * 2. DO...WHILE LOOP
+ * do{
+ *      // task 
+ * }while(condition)
+ */
+
+// Example :
+count = 1;
+do {
+    count++;
+    console.log(count);
+} while (count <= 5)
+
+/**
+ * 3. FOR LOOP
+ * for(statement_1;statement_2;statement_3){
+ *      // task 
+ * }
+ * statement_1 / initialize : mendefinisikan nilai awal acuan looping
+ * statement_2 / condition : menentukan kesesuaian kondisi statement_1
+ * statement_3 / modification : merubah nilai dari statement_1 mengikuti kondisi statement_2
+ */
+
+for (let i = 0; i < 10; i++) {
+    console.log("Student :", i);
+}

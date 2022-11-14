@@ -126,17 +126,73 @@ console.log(print);
  *          - var namaFunc = (argument1...) => { 
  *                  // task 
  *            }
- *  */ 
+ *  */
 
 // input
-let numbA =200;
+let numbA = 200;
 let numbB = 75;
 
 // pemroses --> function
-function penjumlahan (arg1, arg2){
-    let hasil = arg1+arg2;
+function penjumlahan(arg1, arg2) {
+    let hasil = arg1 + arg2;
     return hasil;
 };
 
 // media output
 console.log(penjumlahan(30, 20));
+
+
+function pangkatFunc(value, pangkat = 2) {
+    let temp = value;
+    for (let i = 1; i < pangkat; i++) {
+        console.log(temp);
+        temp *= value
+    }
+    return temp
+}
+
+console.log(pangkatFunc(2, 2, 3, 4));
+
+// Rest Parameter
+function myFunc(a, b, c, ...temp) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(temp);
+    return [a, b, c, temp];
+}
+
+console.log(myFunc('One', 'Two', 'Three'));
+
+function myFunction2() {
+    console.log(arguments[0]);
+    console.log(arguments[1]);
+    console.log(arguments[2]);
+}
+
+myFunction2(1, 2, 3);
+
+// Inline Function
+let pengurangan = (numb1, numb2) => numb1 - numb2;
+
+console.log(pengurangan(5, 2));
+
+// Callback Function
+let kalkulator = (cbfn, numb1, numb2) => {
+    return cbfn(numb1, numb2);
+}
+
+console.log(kalkulator(pengurangan, 5, 10));
+
+// Recursive
+function countDown(startNumber) {
+    console.log(startNumber);
+
+    let nextNumber = startNumber - 1;
+    if(nextNumber >0){
+        console.log(nextNumber);
+        countDown(nextNumber);
+    }
+}
+
+countDown(3)

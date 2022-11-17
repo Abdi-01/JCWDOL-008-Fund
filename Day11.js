@@ -116,6 +116,23 @@ const downloadFinish = new Promise((resolve, reject) => {
     }
 });
 
-Promise.all([downloadStart, downloadHalf, downloadFinish]).then((result) => {
-    console.log(result);
-})
+// Promise.all([downloadStart, downloadHalf, downloadFinish]).then((result) => {
+//     console.log(result);
+// })
+
+// ASYNC / AWAIT
+
+let execute = async () => {
+    try {
+        let result = await downloadStart(url1);
+        console.log(result);
+        let result2 = await downloadHalf;
+        console.log(result2);
+        let result3 = await downloadFinish;
+        console.log(result3);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+execute();

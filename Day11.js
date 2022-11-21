@@ -46,7 +46,7 @@ let url2 = 'https://spotify.com';
 let url3 = 'https://youtube.com';
 
 // Single Callback
-download(url1, notify);
+// download(url1, notify);
 
 // NESTED CALLBACK
 download(url1, () => {
@@ -135,4 +135,4 @@ let execute = async () => {
     }
 }
 
-execute();
+module.exports = { execute, name: 'Abdi' };
